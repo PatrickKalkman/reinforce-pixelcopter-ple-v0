@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "reinforce-pixelcopter-ple-v0"
+version = "0.1.0"
+description = "A Python script that trains a model of a reinforce agent playing Pixelcopter-PLE-v0"
+authors = ["Patrick Kalkman <patrick@simpletechture.nl>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "3.11.6"
+ple = {git = "https://github.com/ntasfi/PyGame-Learning-Environment.git"}
+gym-games = {git = "https://github.com/qlan3/gym-games.git"}
+huggingface-hub = "^0.25.1"
+imageio-ffmpeg = "^0.5.1"
+pyyaml = "6.0"
+torch = {version = "^2.4.1+cu124", source = "pytorch"}
+imageio = "^2.35.1"
+minatar = "1.0.15"
+gymnasium = "^1.0.0"
+pyglet = "^2.0.18"
+
+
+[[tool.poetry.source]]
+name = "pytorch"
+url = "https://download.pytorch.org/whl/cu124"
+priority = "explicit"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

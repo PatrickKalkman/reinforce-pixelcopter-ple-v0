@@ -13,7 +13,7 @@ def record_video(env_id, policy, out_directory, fps=30):
     """
     images = []
     done = False
-    env = gym.make(env_id, render_mode = 'rgb_array')
+    env = gym.make(env_id, render_mode="rgb_array")
     state, _ = env.reset()
     img = env.render()
     images.append(img)
