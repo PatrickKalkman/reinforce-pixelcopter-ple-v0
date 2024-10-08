@@ -8,7 +8,7 @@ from evaluate import evaluate_agent
 
 from hub import push_to_hub
 
-device = torch.device("cuda:0" if torch.cuda.is_available() else "mps")
+device = torch.device("cpu" if torch.cuda.is_available() else "mps")
 print("Device: ", device)
 
 from gym_pygame.envs.pixelcopter import PixelcopterEnv  # Import PixelcopterEnv
@@ -31,7 +31,7 @@ print("Sample observation", env.action_space.sample())
 
 pixelcopter_hyperparameters = {
     "h_size": 64,
-    "n_training_episodes": 100,
+    "n_training_episodes": 20000,
     "n_evaluation_episodes": 10,
     "max_t": 10000,
     "gamma": 0.99,
